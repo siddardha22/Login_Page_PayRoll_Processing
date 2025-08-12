@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auth Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="auth-box">
+      <h2 id="form-title">Welcome Back</h2>
+      <form id="auth-form" novalidate>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <small id="password-help" class="hidden">
+          Password must be at least 8 characters and include one uppercase letter, one number, and one special character.
+        </small>
+
+        <label for="confirm-password" id="confirm-password-label" class="hidden">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" class="hidden" />
+
+        <button type="submit" id="submit-btn">Login</button>
+      </form>
+
+      <div class="toggle-text">
+        <span id="toggle-msg">Don't have an account?</span>
+        <button id="toggle-btn">Sign Up</button>
+      </div>
+
+      <div class="google-signin">
+        <p>Or login with</p>
+        <button id="google-btn">Google</button>
+      </div>
+
+      <button id="back-btn" class="hidden">Back to Login/Signup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
